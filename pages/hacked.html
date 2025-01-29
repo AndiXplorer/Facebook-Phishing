@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked!</title>
+    <link rel="stylesheet" href="../CSS/hacked.css">
+    <link rel="shortcut icon" href="../images/cyber icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>You have been hacked!</h1>
+        <img src="../images/Hacked.png" alt="Hacked">
+        <p>Check Console to look at your inputs</p>
+    </div>
+
+    <script>
+        window.onload = function() {
+        let email = localStorage.getItem("email");
+        let password = localStorage.getItem("password");
+
+        if (email && password) {
+            console.log(`Email: ${email} - Password: ${password}`);
+        }
+    };
+    </script>
+</body>
+</html>
